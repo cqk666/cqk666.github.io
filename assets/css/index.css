@@ -46,19 +46,20 @@ body {
 
 .main {
     padding: 0 30px 30px;
+    display: flex;
 }
 
 .main-left,
 .main-right {
-    float: left;
-    width: 31.5%;
+    width: 33%;
     padding: 0 10px;
+    min-width: 500px;
 }
 
 .main-middle {
-    float: left;
-    width: 35%;
+    width: 34%;
     padding: 0 10px;
+    min-width: 500px;
 }
 
 .border-container {
@@ -152,14 +153,22 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, .1);
     margin: -10px;
     margin-bottom: 0;
-    height: 470px;
+    height: 230px;
 }
 
-.three-pie li,
-.teacher-pie li {
+.three-pie li{
     float: left;
     width: 50%;
     border-right: 1px solid rgba(255, 255, 255, .1);
+}
+.teacher-pie li {
+    margin-top: 20px;
+    float: left;
+    width: 14%;
+    flex-wrap: wrap;
+}
+.teacher-pie li:first-child{
+    width: 30%;
 }
 
 .three-pie li .name-title {
@@ -209,9 +218,26 @@ body {
 }
 
 #teacherrate,
-#courserate,
 #professionrate {
     height: 200px;
+}
+#courserateCS,
+#courserateCS1,
+#courserateCS2,
+#courserateCS3,
+#courserateCS4,
+#courserateCS5{
+width: 100%;
+height: 200px;
+}
+#courserateAuto,
+#courserateAuto1,
+#courserateAuto2,
+#courserateAuto3,
+#courserateAuto4,
+#courserateAuto5{
+width: 100%;
+height: 200px;
 }
 
 #agelist {
@@ -393,7 +419,7 @@ body {
     cursor: pointer;
     outline: none;
     font-size: 16px;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 5px;
     margin-top: 5px;
     height: 30px;

@@ -6,14 +6,14 @@ option = {
     tooltip: {},
     legend: {
 
-        data: ['22级'],
+        data: ['22级计算机','22级自动化'],
         x:"center",
         y:'bottom',
         textStyle:{
             color:"#fff"
         }
     },
-    color: ['#4c95d9'],
+    color: ['#4c95d9','#3c1519'],
     radar: {
         name:{
             textStyle: {
@@ -53,7 +53,11 @@ option = {
         data : [
             {
                 value : [90, 80, 59, 78,67],
-                name : '22级'
+                name : '22级计算机'
+            },
+            {
+                value : [80, 50, 79, 68,56],
+                name : '22级自动化'
             }
         ]
     }]
@@ -68,14 +72,14 @@ option = {
     tooltip: {},
     legend: {
 
-        data: ['21级'],
+        data: ['21级计算机','21级自动化'],
         x:"center",
         y:'bottom',
         textStyle:{
             color:"#fff"
         }
     },
-    color: ['#f6731b'],
+    color: ['#f6731b','#a6331b'],
     radar: {
         name:{
             textStyle: {
@@ -115,7 +119,11 @@ option = {
         data : [
             {
                 value : [68, 68, 68, 96, 86],
-                name : '21级'
+                name : '21级计算机'
+            },
+            {
+                value : [78, 48, 98, 66, 46],
+                name : '21级自动化'
             }
         ]
     }]
@@ -131,14 +139,14 @@ option = {
     tooltip: {},
     legend: {
 
-        data: ['20级'],
+        data: ['20级计算机','20级自动化'],
         x:"center",
         y:'bottom',
         textStyle:{
             color:"#fff"
         }
     },
-    color: ['#8cd43f'],
+    color: ['#8cd43f','#5cf4df'],
     radar: {
         name:{
             textStyle: {
@@ -178,7 +186,11 @@ option = {
         data : [
             {
                 value : [78, 68, 87, 78, 69],
-                name : '20级'
+                name : '20级计算机'
+            },
+            {
+                value : [38, 68, 67, 38, 89],
+                name : '20级自动化'
             }
         ]
     }]
@@ -193,14 +205,14 @@ option = {
     tooltip: {},
     legend: {
 
-        data: ['19级'],
+        data: ['19级计算机','19级自动化'],
         x:"center",
         y:'bottom',
         textStyle:{
             color:"#fff"
         }
     },
-    color: ['#9c146f'],
+    color: ['#9c146f','#9c54df'],
     radar: {
         name:{
             textStyle: {
@@ -240,7 +252,11 @@ option = {
         data : [
             {
                 value : [58, 88, 37, 68, 60],
-                name : '19级'
+                name : '19级计算机'
+            },
+            {
+                value : [68, 88, 87, 48, 80],
+                name : '19级自动化'
             }
         ]
     }]

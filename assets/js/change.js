@@ -126,7 +126,7 @@ new Vue({
                 gradeIndex++;
                 gradeIndex %= this.grade.length
                 this.changedataA(gradeIndex + 1)
-            }, 1000);
+            }, 3000);
         },
         clearTimer() {
             clearInterval(this.clearTimeSet2)
@@ -318,16 +318,858 @@ new Vue({
         }
     },
 })
-/* 位置5*/
+/* 位置三 */
+new Vue({
+    el: '#sit3',
+    data() {
+        return {
+            grade3:'22级',
+            grades3: [
+                { name: '22级', item: 1 },
+                { name: '21级', item: 2 },
+                { name: '20级', item: 3 },
+                { name: '19级', item: 4 },
+            ],
+            totalScore: [13, 35, 47, 30, 8],
+            thoughtScore: [12, 20, 10, 40, 6],
+            matchScore: [30, 50, 10, 29, 10],
+            wentiScore: [10, 20, 30, 20, 30],
+            shijianScore: [20, 30, 50, 10, 20],
+            xueyeScore: [13, 20, 55, 20, 5],
+            totalScores: [
+                [13, 35, 47, 30, 38],
+                [22, 35, 47, 30, 8],
+                [13, 33, 17, 30, 18],
+                [33, 35, 27, 10, 8],
+            ],
+            thoughtScores: [
+                [12, 20, 10, 40, 6],
+                [22, 15, 47, 30, 8],
+                [13, 33, 17, 30, 18],
+                [33, 35, 27, 10, 8],
+            ],
+            matchScores: [
+                [30, 50, 10, 29, 10],
+                [22, 35, 47, 10, 8],
+                [13, 13, 17, 30, 18],
+                [33, 15, 27, 10, 38],
+            ],
+            wentiScores: [
+                [10, 20, 30, 20, 30],
+                [22, 15, 47, 30, 38],
+                [13, 33, 17, 30, 18],
+                [33, 35, 27, 10, 8],
+            ],
+            shijianScores: [
+                [20, 30, 50, 10, 20],
+                [22, 35, 47, 30, 38],
+                [13, 33, 17, 30, 18],
+                [33, 35, 27, 10, 8],
+            ],
+            xueyeScores: [
+                [13, 20, 55, 20, 5],
+                [22, 35, 17, 30, 8],
+                [13, 33, 17, 30, 18],
+                [13, 35, 27, 10, 8],
+            ],
+            totalScoreAuto: [23, 25, 47, 20, 8],
+            thoughtScoreAuto: [12, 30, 10, 30, 6],
+            matchScoreAuto: [30, 30, 10, 39, 10],
+            wentiScoreAuto: [10, 20, 30, 20, 30],
+            shijianScoreAuto: [20, 30, 50, 10, 20],
+            xueyeScoreAuto: [13, 20, 55, 20, 5],
+            totalScoresAuto: [
+                [23, 25, 47, 20, 38],
+                [22, 35, 47, 30, 8],
+                [13, 33, 37, 30, 18],
+                [33, 35, 27, 30, 8],
+            ],
+            thoughtScoresAuto: [
+                [12, 30, 10, 30, 6],
+                [22, 15, 47, 30, 8],
+                [13, 33, 17, 30, 11],
+                [33, 35, 27, 10, 8],
+            ],
+            matchScoresAuto: [
+                [30, 30, 10, 39, 10],
+                [22, 35, 37, 10, 18],
+                [33, 13, 17, 30, 11],
+                [33, 15, 37, 10, 31],
+            ],
+            wentiScoresAuto: [
+                [10, 20, 30, 20, 30],
+                [22, 35, 47, 30, 38],
+                [13, 33, 17, 30, 11],
+                [33, 35, 37, 10, 8],
+            ],
+            shijianScoresAuto: [
+                [20, 30, 50, 10, 20],
+                [22, 35, 47, 30, 38],
+                [33, 33, 37, 30, 18],
+                [33, 35, 27, 10, 18],
+            ],
+            xueyeScoresAuto: [
+                [13, 20, 55, 20, 5],
+                [22, 35, 37, 30, 11],
+                [33, 33, 17, 30, 18],
+                [13, 35, 27, 10, 8],
+            ]
+        }
+    },
+    beforeCreate() {
+        clearInterval(this.clearTimeSet6)
+    },
+    mounted() {
+        this.drawSit3CS1()
+        this.drawSit3CS2()
+        this.drawSit3CS3()
+        this.drawSit3CS4()
+        this.drawSit3CS5()
+        this.drawSit3CS6()
+        this.drawSit3Auto1()
+        this.drawSit3Auto2()
+        this.drawSit3Auto3()
+        this.drawSit3Auto4()
+        this.drawSit3Auto5()
+        this.drawSit3Auto6()
+        this.setTimer3()
+    },
+    methods: {
+        startAuto3() {
+            this.setTimer3()
+        },
+        setTimer3() {
+            var gradeIndex3 = 0
+            this.clearTimeSet3 = setInterval(() => {
+                gradeIndex3++;
+                gradeIndex3 %= this.grades3.length
+                this.changedataA3(gradeIndex3 + 1)
+            }, 3000);
+        },
+        changedataA3(item) {
+            if (item == 1) {
+                this.totalScore = this.totalScores[item - 1]
+                this.thoughtScore = this.thoughtScores[item - 1]
+                this.matchScore = this.matchScores[item - 1]
+                this.wentiScore = this.wentiScores[item - 1]
+                this.shijianScore = this.shijianScores[item - 1]
+                this.xueyeScore = this.xueyeScores[item - 1]
+                this.grade3=this.grades3[item-1].name
+                this.totalScoreAuto = this.totalScoresAuto[item - 1]
+                this.thoughtScoreAuto = this.thoughtScoresAuto[item - 1]
+                this.matchScoreAuto = this.matchScoresAuto[item - 1]
+                this.wentiScoreAuto = this.wentiScoresAuto[item - 1]
+                this.shijianScoreAuto = this.shijianScoresAuto[item - 1]
+                this.xueyeScoreAuto = this.xueyeScoresAuto[item - 1]
+                this.drawSit3CS1()
+                this.drawSit3CS2()
+                this.drawSit3CS3()
+                this.drawSit3CS4()
+                this.drawSit3CS5()
+                this.drawSit3CS6()
+                this.drawSit3Auto1()
+                this.drawSit3Auto2()
+                this.drawSit3Auto3()
+                this.drawSit3Auto4()
+                this.drawSit3Auto5()
+                this.drawSit3Auto6()
+            };
+            if (item == 2) {
+                this.totalScore = this.totalScores[item - 1]
+                this.thoughtScore = this.thoughtScores[item - 1]
+                this.matchScore = this.matchScores[item - 1]
+                this.wentiScore = this.wentiScores[item - 1]
+                this.shijianScore = this.shijianScores[item - 1]
+                this.xueyeScore = this.xueyeScores[item - 1]
+                this.grade3=this.grades3[item-1].name
+                this.totalScoreAuto = this.totalScoresAuto[item - 1]
+                this.thoughtScoreAuto = this.thoughtScoresAuto[item - 1]
+                this.matchScoreAuto = this.matchScoresAuto[item - 1]
+                this.wentiScoreAuto = this.wentiScoresAuto[item - 1]
+                this.shijianScoreAuto = this.shijianScoresAuto[item - 1]
+                this.xueyeScoreAuto = this.xueyeScoresAuto[item - 1]
+                this.drawSit3CS1()
+                this.drawSit3CS2()
+                this.drawSit3CS3()
+                this.drawSit3CS4()
+                this.drawSit3CS5()
+                this.drawSit3CS6()
+                this.drawSit3Auto1()
+                this.drawSit3Auto2()
+                this.drawSit3Auto3()
+                this.drawSit3Auto4()
+                this.drawSit3Auto5()
+                this.drawSit3Auto6()
+            };
+            if (item == 3) {
+                this.totalScore = this.totalScores[item - 1]
+                this.thoughtScore = this.thoughtScores[item - 1]
+                this.matchScore = this.matchScores[item - 1]
+                this.wentiScore = this.wentiScores[item - 1]
+                this.shijianScore = this.shijianScores[item - 1]
+                this.xueyeScore = this.xueyeScores[item - 1]
+                this.grade3=this.grades3[item-1].name
+                this.totalScoreAuto = this.totalScoresAuto[item - 1]
+                this.thoughtScoreAuto = this.thoughtScoresAuto[item - 1]
+                this.matchScoreAuto = this.matchScoresAuto[item - 1]
+                this.wentiScoreAuto = this.wentiScoresAuto[item - 1]
+                this.shijianScoreAuto = this.shijianScoresAuto[item - 1]
+                this.xueyeScoreAuto = this.xueyeScoresAuto[item - 1]
+                this.drawSit3CS1()
+                this.drawSit3CS2()
+                this.drawSit3CS3()
+                this.drawSit3CS4()
+                this.drawSit3CS5()
+                this.drawSit3CS6()
+                this.drawSit3Auto1()
+                this.drawSit3Auto2()
+                this.drawSit3Auto3()
+                this.drawSit3Auto4()
+                this.drawSit3Auto5()
+                this.drawSit3Auto6()
+            };
+            if (item == 4) {
+                this.totalScore = this.totalScores[item - 1]
+                this.thoughtScore = this.thoughtScores[item - 1]
+                this.matchScore = this.matchScores[item - 1]
+                this.wentiScore = this.wentiScores[item - 1]
+                this.shijianScore = this.shijianScores[item - 1]
+                this.xueyeScore = this.xueyeScores[item - 1]
+                this.grade3=this.grades3[item-1].name
+                this.totalScoreAuto = this.totalScoresAuto[item - 1]
+                this.thoughtScoreAuto = this.thoughtScoresAuto[item - 1]
+                this.matchScoreAuto = this.matchScoresAuto[item - 1]
+                this.wentiScoreAuto = this.wentiScoresAuto[item - 1]
+                this.shijianScoreAuto = this.shijianScoresAuto[item - 1]
+                this.xueyeScoreAuto = this.xueyeScoresAuto[item - 1]
+                this.drawSit3CS1()
+                this.drawSit3CS2()
+                this.drawSit3CS3()
+                this.drawSit3CS4()
+                this.drawSit3CS5()
+                this.drawSit3CS6()
+                this.drawSit3Auto1()
+                this.drawSit3Auto2()
+                this.drawSit3Auto3()
+                this.drawSit3Auto4()
+                this.drawSit3Auto5()
+                this.drawSit3Auto6()
+            };
+        },
+        drawSit3CS1() {
+            var courserateCS = echarts.init(document.getElementById('courserateCS'));
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                title: {
+                    text: '总分',
+                    x: 'center',
+                    textStyle: {
+                        color: '#27c2c1'
+                    }
+                },
+                series: [
+                    {
+                        name: 'FK',
+                        type: 'pie',
+                        radius: '80%',
+                        color: ['#27c2c1', '#9ccb63', '#fcd85a', '#6f80ce', '#f0c1da'],
+                        center: ['50%', '55%'],
+                        data: [
+                            { value: this.totalScore[0], name: '90-100' },
+                            { value: this.totalScore[1], name: '80-90' },
+                            { value: this.totalScore[2], name: '70-80' },
+                            { value: this.totalScore[3], name: '60-70' },
+                            { value: this.totalScore[4], name: '0-60' },
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    position: 'inside',
+                                    formatter: '{b}'
+                                }
+                            },
+                            labelLine: { show: true }
+                        }
+                    }
+                ]
+            };
+            courserateCS.setOption(option);
+        },
+        drawSit3CS2() {
+            var courserateCS1 = echarts.init(document.getElementById('courserateCS1'));
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                title: {
+                    text: '思想',
+                    x: 'center',
+                    textStyle: {
+                        color: '#27c2c1'
+                    }
+                },
+                series: [
+                    {
+                        name: 'FK',
+                        type: 'pie',
+                        radius: '90%',
+                        color: ['#27c2c1', '#9ccb63', '#fcd85a', '#6f80ce', '#f0c1da'],
+                        center: ['50%', '50%'],
+                        data: [
+                            { value: this.thoughtScore[0], name: '90-100' },
+                            { value: this.thoughtScore[1], name: '80-90' },
+                            { value: this.thoughtScore[2], name: '70-80' },
+                            { value: this.thoughtScore[3], name: '60-70' },
+                            { value: this.thoughtScore[4], name: '0-60' },
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false,
+                                    position: 'outside',
+                                    formatter: '{b}'
+                                }
+                            },
+                            labelLine: { show: true }
+                        }
+                    }
+                ]
+            };
+            courserateCS1.setOption(option);
+        },
+        drawSit3CS3() {
+            var courserateCS2 = echarts.init(document.getElementById('courserateCS2'));
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                title: {
+                    text: '科研竞赛',
+                    x: 'center',
+                    textStyle: {
+                        color: '#27c2c1'
+                    }
+                },
+                series: [
+                    {
+                        name: 'FK',
+                        type: 'pie',
+                        radius: '90%',
+                        color: ['#27c2c1', '#9ccb63', '#fcd85a', '#6f80ce', '#f0c1da'],
+                        center: ['50%', '50%'],
+                        data: [
+                            { value: this.matchScore[0], name: '90-100' },
+                            { value: this.matchScore[1], name: '80-90' },
+                            { value: this.matchScore[2], name: '70-80' },
+                            { value: this.matchScore[3], name: '60-70' },
+                            { value: this.matchScore[4], name: '0-60' },
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false,
+                                    position: 'outside',
+                                    formatter: '{b}'
+                                }
+                            },
+                            labelLine: { show: true }
+                        }
+                    }
+                ]
+            };
+            courserateCS2.setOption(option);
+        },
+        drawSit3CS4() {
+            var courserateCS3 = echarts.init(document.getElementById('courserateCS3'));
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                title: {
+                    text: '文体',
+                    x: 'center',
+                    textStyle: {
+                        color: '#27c2c1'
+                    }
+                },
+                series: [
+                    {
+                        name: 'FK',
+                        type: 'pie',
+                        radius: '90%',
+                        color: ['#27c2c1', '#9ccb63', '#fcd85a', '#6f80ce', '#f0c1da'],
+                        center: ['50%', '50%'],
+                        data: [
+                            { value: this.wentiScore[0], name: '90-100' },
+                            { value: this.wentiScore[1], name: '80-90' },
+                            { value: this.wentiScore[2], name: '70-80' },
+                            { value: this.wentiScore[3], name: '60-70' },
+                            { value: this.wentiScore[4], name: '0-60' },
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false,
+                                    position: 'outside',
+                                    formatter: '{b}'
+                                }
+                            },
+                            labelLine: { show: true }
+                        }
+                    }
+                ]
+            };
+            courserateCS3.setOption(option);
+        },
+        drawSit3CS5() {
+            var courserateCS4 = echarts.init(document.getElementById('courserateCS4'));
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                title: {
+                    text: '实践',
+                    x: 'center',
+                    textStyle: {
+                        color: '#27c2c1'
+                    }
+                },
+                series: [
+                    {
+                        name: 'FK',
+                        type: 'pie',
+                        radius: '90%',
+                        color: ['#27c2c1', '#9ccb63', '#fcd85a', '#6f80ce', '#f0c1da'],
+                        center: ['50%', '50%'],
+                        data: [
+                            { value: this.shijianScore[0], name: '90-100' },
+                            { value: this.shijianScore[1], name: '80-90' },
+                            { value: this.shijianScore[2], name: '70-80' },
+                            { value: this.shijianScore[3], name: '60-70' },
+                            { value: this.shijianScore[4], name: '0-60' },
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false,
+                                    position: 'outside',
+                                    formatter: '{b}'
+                                }
+                            },
+                            labelLine: { show: true }
+                        }
+                    }
+                ]
+            };
+            courserateCS4.setOption(option);
+        },
+        drawSit3CS6() {
+            var courserateCS5 = echarts.init(document.getElementById('courserateCS5'));
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                title: {
+                    text: '学业',
+                    x: 'center',
+                    textStyle: {
+                        color: '#27c2c1'
+                    }
+                },
+                series: [
+                    {
+                        name: 'FK',
+                        type: 'pie',
+                        radius: '90%',
+                        color: ['#27c2c1', '#9ccb63', '#fcd85a', '#6f80ce', '#f0c1da'],
+                        center: ['50%', '50%'],
+                        data: [
+                            { value: this.xueyeScore[0], name: '90-100' },
+                            { value: this.xueyeScore[1], name: '80-90' },
+                            { value: this.xueyeScore[2], name: '70-80' },
+                            { value: this.xueyeScore[3], name: '60-70' },
+                            { value: this.xueyeScore[4], name: '0-60' },
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false,
+                                    position: 'outside',
+                                    formatter: '{b}'
+                                }
+                            },
+                            labelLine: { show: true }
+                        }
+                    }
+                ]
+            };
+            courserateCS5.setOption(option);
+        },
+        drawSit3Auto1() {
+            var courserateAuto = echarts.init(document.getElementById('courserateAuto'));
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                title: {
+                    text: '总分',
+                    x: 'center',
+                    textStyle: {
+                        color: '#27c2c1'
+                    }
+                },
+                series: [
+                    {
+                        name: 'FK',
+                        type: 'pie',
+                        radius: '80%',
+                        color: ['#27c2c1', '#9ccb63', '#fcd85a', '#6f80ce', '#f0c1da'],
+                        center: ['50%', '55%'],
+                        data: [
+                            { value: this.totalScoreAuto[0], name: '90-100' },
+                            { value: this.totalScoreAuto[1], name: '80-90' },
+                            { value: this.totalScoreAuto[2], name: '70-80' },
+                            { value: this.totalScoreAuto[3], name: '60-70' },
+                            { value: this.totalScoreAuto[4], name: '0-60' },
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    position: 'inside',
+                                    formatter: '{b}'
+                                }
+                            },
+                            labelLine: { show: true }
+                        }
+                    }
+                ]
+            };
+            courserateAuto.setOption(option);
+        },
+        drawSit3Auto2() {
+            var courserateAuto1 = echarts.init(document.getElementById('courserateAuto1'));
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                title: {
+                    text: '思想',
+                    x: 'center',
+                    textStyle: {
+                        color: '#27c2c1'
+                    }
+                },
+                series: [
+                    {
+                        name: 'FK',
+                        type: 'pie',
+                        radius: '90%',
+                        color: ['#27c2c1', '#9ccb63', '#fcd85a', '#6f80ce', '#f0c1da'],
+                        center: ['50%', '50%'],
+                        data: [
+                            { value: this.thoughtScoreAuto[0], name: '90-100' },
+                            { value: this.thoughtScoreAuto[1], name: '80-90' },
+                            { value: this.thoughtScoreAuto[2], name: '70-80' },
+                            { value: this.thoughtScoreAuto[3], name: '60-70' },
+                            { value: this.thoughtScoreAuto[4], name: '0-60' },
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false,
+                                    position: 'outside',
+                                    formatter: '{b}'
+                                }
+                            },
+                            labelLine: { show: true }
+                        }
+                    }
+                ]
+            };
+            courserateAuto1.setOption(option);
+        },
+        drawSit3Auto3() {
+            var courserateAuto2 = echarts.init(document.getElementById('courserateAuto2'));
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                title: {
+                    text: '科研竞赛',
+                    x: 'center',
+                    textStyle: {
+                        color: '#27c2c1'
+                    }
+                },
+                series: [
+                    {
+                        name: 'FK',
+                        type: 'pie',
+                        radius: '90%',
+                        color: ['#27c2c1', '#9ccb63', '#fcd85a', '#6f80ce', '#f0c1da'],
+                        center: ['50%', '50%'],
+                        data: [
+                            { value: this.matchScoreAuto[0], name: '90-100' },
+                            { value: this.matchScoreAuto[1], name: '80-90' },
+                            { value: this.matchScoreAuto[2], name: '70-80' },
+                            { value: this.matchScoreAuto[3], name: '60-70' },
+                            { value: this.matchScoreAuto[4], name: '0-60' },
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false,
+                                    position: 'outside',
+                                    formatter: '{b}'
+                                }
+                            },
+                            labelLine: { show: true }
+                        }
+                    }
+                ]
+            };
+            courserateAuto2.setOption(option);
+        },
+        drawSit3Auto4() {
+            var courserateAuto3 = echarts.init(document.getElementById('courserateAuto3'));
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                title: {
+                    text: '文体',
+                    x: 'center',
+                    textStyle: {
+                        color: '#27c2c1'
+                    }
+                },
+                series: [
+                    {
+                        name: 'FK',
+                        type: 'pie',
+                        radius: '90%',
+                        color: ['#27c2c1', '#9ccb63', '#fcd85a','#6f80ce', '#f0c1da'],
+                        center: ['50%', '50%'],
+                        data: [
+                            { value: this.wentiScoreAuto[0], name: '90-100' },
+                            { value: this.wentiScoreAuto[1], name: '80-90' },
+                            { value: this.wentiScoreAuto[2], name: '70-80' },
+                            { value: this.wentiScoreAuto[3], name: '60-70' },
+                            { value: this.wentiScoreAuto[4], name: '0-60' },
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false,
+                                    position: 'outside',
+                                    formatter: '{b}'
+                                }
+                            },
+                            labelLine: { show: true }
+                        }
+                    }
+                ]
+            };
+            courserateAuto3.setOption(option);
+        },
+        drawSit3Auto5() {
+            var courserateAuto4 = echarts.init(document.getElementById('courserateAuto4'));
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                title: {
+                    text: '实践',
+                    x: 'center',
+                    textStyle: {
+                        color: '#27c2c1'
+                    }
+                },
+                series: [
+                    {
+                        name: 'FK',
+                        type: 'pie',
+                        radius: '90%',
+                        color: ['#27c2c1', '#9ccb63', '#fcd85a', '#6f80ce', '#f0c1da'],
+                        center: ['50%', '50%'],
+                        data: [
+                            { value: this.shijianScoreAuto[0], name: '90-100' },
+                            { value: this.shijianScoreAuto[1], name: '80-90' },
+                            { value: this.shijianScoreAuto[2], name: '70-80' },
+                            { value: this.shijianScoreAuto[3], name: '60-70' },
+                            { value: this.shijianScoreAuto[4], name: '0-60' },
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false,
+                                    position: 'outside',
+                                    formatter: '{b}'
+                                }
+                            },
+                            labelLine: { show: true }
+                        }
+                    }
+                ]
+            };
+            courserateAuto4.setOption(option);
+        },
+        drawSit3Auto6() {
+            var courserateAuto5 = echarts.init(document.getElementById('courserateAuto5'));
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                title: {
+                    text: '学业',
+                    x: 'center',
+                    textStyle: {
+                        color: '#27c2c1'
+                    }
+                },
+                series: [
+                    {
+                        name: 'FK',
+                        type: 'pie',
+                        radius: '90%',
+                        color: ['#27c2c1', '#9ccb63', '#fcd85a', '#6f80ce', '#f0c1da'],
+                        center: ['50%', '50%'],
+                        data: [
+                            { value: this.xueyeScoreAuto[0], name: '90-100' },
+                            { value: this.xueyeScoreAuto[1], name: '80-90' },
+                            { value: this.xueyeScoreAuto[2], name: '70-80' },
+                            { value: this.xueyeScoreAuto[3], name: '60-70' },
+                            { value: this.xueyeScoreAuto[4], name: '0-60' },
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false,
+                                    position: 'outside',
+                                    formatter: '{b}'
+                                }
+                            },
+                            labelLine: { show: true }
+                        }
+                    }
+                ]
+            };
+            courserateAuto5.setOption(option);
+        },
+    }
+})
+/* 位置五*/
 new Vue({
     el: '#sit5',
     data() {
         return {
-            grades5: [
+            grades51: [
                 { name: '22级计算机', item: 1 },
                 { name: '21级计算机', item: 2 },
                 { name: '20级计算机', item: 3 },
                 { name: '19级计算机', item: 4 },
+            ],
+            grades52:[
                 { name: '22级自动化', item: 5 },
                 { name: '21级自动化', item: 6 },
                 { name: '20级自动化', item: 7 },
@@ -445,13 +1287,13 @@ new Vue({
                 this.grade5CSAuto[4].F
             ]
         },
-        grade5CSAutoTotal(){
-            var a =this.grade5CSAuto[0].A+this.grade5CSAuto[1].A+this.grade5CSAuto[2].A+this.grade5CSAuto[3].A+this.grade5CSAuto[4].A
-            var b =this.grade5CSAuto[0].B+this.grade5CSAuto[1].B+this.grade5CSAuto[2].B+this.grade5CSAuto[3].B+this.grade5CSAuto[4].B
-            var c =this.grade5CSAuto[0].C+this.grade5CSAuto[1].C+this.grade5CSAuto[2].C+this.grade5CSAuto[3].C+this.grade5CSAuto[4].C
-            var d =this.grade5CSAuto[0].D+this.grade5CSAuto[1].D+this.grade5CSAuto[2].D+this.grade5CSAuto[3].D+this.grade5CSAuto[4].D
-            var e =this.grade5CSAuto[0].F+this.grade5CSAuto[1].F+this.grade5CSAuto[2].F+this.grade5CSAuto[3].F+this.grade5CSAuto[4].F
-            return [a,b,c,d,e]
+        grade5CSAutoTotal() {
+            var a = this.grade5CSAuto[0].A + this.grade5CSAuto[1].A + this.grade5CSAuto[2].A + this.grade5CSAuto[3].A + this.grade5CSAuto[4].A
+            var b = this.grade5CSAuto[0].B + this.grade5CSAuto[1].B + this.grade5CSAuto[2].B + this.grade5CSAuto[3].B + this.grade5CSAuto[4].B
+            var c = this.grade5CSAuto[0].C + this.grade5CSAuto[1].C + this.grade5CSAuto[2].C + this.grade5CSAuto[3].C + this.grade5CSAuto[4].C
+            var d = this.grade5CSAuto[0].D + this.grade5CSAuto[1].D + this.grade5CSAuto[2].D + this.grade5CSAuto[3].D + this.grade5CSAuto[4].D
+            var e = this.grade5CSAuto[0].F + this.grade5CSAuto[1].F + this.grade5CSAuto[2].F + this.grade5CSAuto[3].F + this.grade5CSAuto[4].F
+            return [a, b, c, d, e]
         }
     },
     mounted() {
@@ -469,9 +1311,9 @@ new Vue({
             var gradeIndex5 = 0
             this.clearTimeSet5 = setInterval(() => {
                 gradeIndex5++;
-                gradeIndex5 %= this.grades5.length
+                gradeIndex5 %= this.grades51.length+this.grades52.length
                 this.changeDataA5(gradeIndex5 + 1)
-            }, 1000);
+            }, 3000);
         },
         clearTimer5() {
             clearInterval(this.clearTimeSet5)
@@ -479,96 +1321,96 @@ new Vue({
         changeDataSit5(item) {
             if (item == 1) {
                 this.grade5CSAuto = this.grade5CS22
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades51[item - 1].name
                 this.drawSit5()
                 clearInterval(this.clearTimeSet5)
             };
             if (item == 2) {
                 this.grade5CSAuto = this.grade5CS21
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades51[item - 1].name
                 this.drawSit5()
                 clearInterval(this.clearTimeSet5)
             };
             if (item == 3) {
                 this.grade5CSAuto = this.grade5CS20
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades51[item - 1].name
                 this.drawSit5()
                 clearInterval(this.clearTimeSet5)
             };
             if (item == 4) {
                 this.grade5CSAuto = this.grade5CS19
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades51[item - 1].name
                 this.drawSit5()
                 clearInterval(this.clearTimeSet5)
             };
-            if (item ==5) {
+            if (item == 5) {
                 this.grade5CSAuto = this.grade5Auto22
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades52[item - 5].name
                 this.drawSit5()
                 clearInterval(this.clearTimeSet5)
             };
             if (item == 6) {
                 this.grade5CSAuto = this.grade5Auto21
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades52[item - 5].name
                 this.drawSit5()
                 clearInterval(this.clearTimeSet5)
             };
-            if (item ==7) {
+            if (item == 7) {
                 this.grade5CSAuto = this.grade5Auto20
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades52[item - 5].name
                 this.drawSit5()
                 clearInterval(this.clearTimeSet5)
             };
             if (item == 8) {
                 this.grade5CSAuto = this.grade5Auto19
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades52[item - 5].name
                 this.drawSit5()
                 clearInterval(this.clearTimeSet5)
             };
-            
+
         },
         changeDataA5(item) {
             if (item == 1) {
                 this.grade5CSAuto = this.grade5CS22
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades51[item - 1].name
                 this.drawSit5()
             };
             if (item == 2) {
                 this.grade5CSAuto = this.grade5CS21
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades51[item - 1].name
                 this.drawSit5()
             };
             if (item == 3) {
                 this.grade5CSAuto = this.grade5CS20
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades51[item - 1].name
                 this.drawSit5()
             };
             if (item == 4) {
                 this.grade5CSAuto = this.grade5CS19
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades51[item - 1].name
                 this.drawSit5()
             };
-            if (item ==5) {
+            if (item == 5) {
                 this.grade5CSAuto = this.grade5Auto22
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades52[item - 5].name
                 this.drawSit5()
             };
             if (item == 6) {
                 this.grade5CSAuto = this.grade5Auto21
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades52[item - 5].name
                 this.drawSit5()
             };
-            if (item ==7) {
+            if (item == 7) {
                 this.grade5CSAuto = this.grade5Auto20
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades52[item - 5].name
                 this.drawSit5()
             };
             if (item == 8) {
                 this.grade5CSAuto = this.grade5Auto19
-                this.grade5 = this.grades5[item - 1].name
+                this.grade5 = this.grades52[item - 5].name
                 this.drawSit5()
             };
-            
+
         },
         drawSit5() {
             var edubalance = echarts.init(document.getElementById('edubalance'));
@@ -794,14 +1636,14 @@ new Vue({
         return {
             gradeCS6: [80, 78, 86, 78, 86],
             gradeAuto6: [89, 77, 79, 88, 98],
-            gradeCS61: [89, 97, 76, 88, 96],
-            gradeCS62: [43, 87, 96, 78, ''],
-            gradeCS63: [65, 98, 86, '', ''],
-            gradeCS64: [85, 88, '', '', ''],
-            gradeAuto61: [83, 79, 89, 98, 87],
-            gradeAuto62: [87, 89, 86, 78, ''],
-            gradeAuto63: [68, 78, 78, '', ''],
-            gradeAuto64: [78, 87, '', '', ''],
+            gradeCS61: [89, 97, 76, 88, 96,89, 97, 76, 88, 96],
+            gradeCS62: [ '', '',43, 87, 96, 78,43, 87, 96, 78],
+            gradeCS63: [ '', '', '', '',65, 98, 86,65, 98, 86],
+            gradeCS64: [ '', '', '', '', '', '',85, 88,85, 88],
+            gradeAuto61: [83, 79, 89, 98, 87,83, 79, 89, 98, 87],
+            gradeAuto62: [ '','',87, 89, 86, 78, 87, 89, 86, 78],
+            gradeAuto63: [ '', '','', '',68, 78, 78, 68, 78, 78],
+            gradeAuto64: ['', '', '', '', '', '',78, 87,78, 87],
             gradesSit6: [
                 { name: '22级', item: 1 },
                 { name: '21级', item: 2 },
@@ -829,7 +1671,7 @@ new Vue({
                 gradeIndex6++;
                 gradeIndex6 %= this.gradesSit6.length
                 this.changedataA6(gradeIndex6 + 1)
-            }, 1000);
+            }, 3000);
         },
         clearTimer6() {
             clearInterval(this.clearTimeSet6)
@@ -940,7 +1782,7 @@ new Vue({
                     {
                         type: 'category',
                         boundaryGap: false,
-                        data: ['2022年', '2023年', '2024年', '2025年', '2026年'],
+                        data: ['大一上', '大一下', '大二上', '大二下', '大三上', '大三下', '大四上', '大四下'],
                         splitLine: {
                             show: true,
                             lineStyle: {
@@ -999,16 +1841,19 @@ new Vue({
     el: '#sit7',
     data() {
         return {
-            grades7: [
+            grades71: [
                 { name: '22级计算机', item: 1 },
                 { name: '21级计算机', item: 2 },
                 { name: '20级计算机', item: 3 },
                 { name: '19级计算机', item: 4 },
+            ],
+            grades72: [
                 { name: '22级自动化', item: 5 },
                 { name: '21级自动化', item: 6 },
                 { name: '20级自动化', item: 7 },
                 { name: '19级自动化', item: 8 },
             ],
+
             grade7: '22级计算机',
             grade7CSAuto: [
                 { index: 01, name: 'xxx', score1: 98, score2: 98, score3: 98, score4: 98, score5: 98 },
@@ -1220,42 +2065,42 @@ new Vue({
         changeDataSit7(item) {
             if (item == 1) {
                 this.grade7CSAuto = this.grade7CS22
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades71[item - 1].name
                 clearInterval(this.clearTimeSet7)
             };
             if (item == 2) {
                 this.grade7CSAuto = this.grade7CS21
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades71[item - 1].name
                 clearInterval(this.clearTimeSet7)
             };
             if (item == 3) {
                 this.grade7CSAuto = this.grade7CS20
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades71[item - 1].name
                 clearInterval(this.clearTimeSet7)
             };
             if (item == 4) {
                 this.grade7CSAuto = this.grade7CS19
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades71[item - 1].name
                 clearInterval(this.clearTimeSet7)
             };
             if (item == 5) {
                 this.grade7CSAuto = this.grade7Auto22
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades72[item - 5].name
                 clearInterval(this.clearTimeSet7)
             };
             if (item == 6) {
                 this.grade7CSAuto = this.grade7Auto21
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades72[item - 5].name
                 clearInterval(this.clearTimeSet7)
             };
             if (item == 7) {
                 this.grade7CSAuto = this.grade7Auto20
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades72[item - 5].name
                 clearInterval(this.clearTimeSet7)
             };
             if (item == 8) {
                 this.grade7CSAuto = this.grade7Auto19
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades72[item - 5].name
                 clearInterval(this.clearTimeSet7)
             };
         },
@@ -1266,42 +2111,42 @@ new Vue({
             var gradeIndex7 = 0
             this.clearTimeSet7 = setInterval(() => {
                 gradeIndex7++;
-                gradeIndex7 %= this.grades7.length
+                gradeIndex7 %= this.grades71.length+this.grades72.length
                 this.changedataA7(gradeIndex7 + 1)
-            }, 1000);
+            }, 3000);
         },
         changedataA7(item) {
             if (item == 1) {
                 this.grade7CSAuto = this.grade7CS22
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades71[item - 1].name
             };
             if (item == 2) {
                 this.grade7CSAuto = this.grade7CS21
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades71[item - 1].name
             };
             if (item == 3) {
                 this.grade7CSAuto = this.grade7CS20
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades71[item - 1].name
             };
             if (item == 4) {
                 this.grade7CSAuto = this.grade7CS19
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades71[item - 1].name
             };
             if (item == 5) {
                 this.grade7CSAuto = this.grade7Auto22
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades72[item - 5].name
             };
             if (item == 6) {
                 this.grade7CSAuto = this.grade7Auto21
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades72[item - 5].name
             };
             if (item == 7) {
                 this.grade7CSAuto = this.grade7Auto20
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades72[item - 5].name
             };
             if (item == 8) {
                 this.grade7CSAuto = this.grade7Auto19
-                this.grade7 = this.grades7[item - 1].name
+                this.grade7 = this.grades72[item - 5].name
             };
         },
 
@@ -1309,9 +2154,9 @@ new Vue({
 })
 /* 位置八 */
 new Vue({
-    el:'#sit8',
-    data(){
-        return{
+    el: '#sit8',
+    data() {
+        return {
             grade8CS22: { A: 89, B: 84, C: 83, D: 79, F: 87 },
             grade8CS21: { A: 89, B: 84, C: 83, D: 79, F: 75 },
             grade8CS20: { A: 79, B: 84, C: 83, D: 79, F: 47 },
@@ -1323,44 +2168,44 @@ new Vue({
 
         }
     },
-    mounted(){
+    mounted() {
         this.drawSit8()
     },
-    methods:{
-        drawSit8(){
+    methods: {
+        drawSit8() {
             var juniorservice = echarts.init(document.getElementById('juniorservice'));
             option = {
-                tooltip : {
+                tooltip: {
                     trigger: 'axis',
-                    axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-                        type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                    axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                        type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
                     }
                 },
-                color:['#eaff00','#22ac38','#6bc0fb','#7fec9d','#fedd8b',],
+                color: ['#eaff00', '#22ac38', '#6bc0fb', '#7fec9d', '#fedd8b',],
                 legend: {
-                    right:'0',
-                    data: ['思想', '科研竞赛','文体','实践','学业'],
-                    textStyle:{
-                        color:'#00ffff'
+                    right: '0',
+                    data: ['思想', '科研竞赛', '文体', '实践', '学业'],
+                    textStyle: {
+                        color: '#00ffff'
                     }
                 },
                 grid: {
                     left: '8%',
                     right: '4%',
                     bottom: '3%',
-                    top:'10%',
+                    top: '10%',
                     containLabel: true
                 },
-                xAxis:  {
+                xAxis: {
                     type: 'value',
-                    splitLine:{
-                        show:true,
-                        lineStyle:{
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
                             color: '#1e2b43'
                         }
                     },
                     axisLine: {
-                        show:false,
+                        show: false,
                         lineStyle: {
                             color: '#115372'
                         }
@@ -1368,59 +2213,60 @@ new Vue({
                     axisTick: {
                         show: false
                     },
-                    axisLabel:{
-                        textStyle:{
-                            color:"#fff"
+                    axisLabel: {
+                        textStyle: {
+                            color: "#fff"
                         },
                         alignWithLabel: true,
-                        interval:0
-        
+                        interval: 0
+
                     }
                 },
                 dataZoom: [{
                     type: 'slider',
-                    width:'57',
+                    width: '57',
                     yAxisIndex: 0,
                     filterMode: 'empty',
                     start: 0,
-                    x:'0',
+                    x: '0',
                     end: 60,
-                    handleStyle:{
-                        color:"#519cff",
-                        backgroundColor:'#519cff'
+                    handleStyle: {
+                        color: "#519cff",
+                        backgroundColor: '#519cff'
                     },
-                    textStyle:{
-                        color:"#fff"},
-                    borderColor:"#519cff"
+                    textStyle: {
+                        color: "#fff"
+                    },
+                    borderColor: "#519cff"
                 }],
                 yAxis: {
                     type: 'category',
-                    data: ['22级计算机','21级计算机','20级计算机',' 19级计算机','22级自动化','21级自动化','20级自动化','19级自动化'],
-                    splitLine:{
-                        show:false,
-                        lineStyle:{
+                    data: ['22级计算机', '21级计算机', '20级计算机', ' 19级计算机', '22级自动化', '21级自动化', '20级自动化', '19级自动化'],
+                    splitLine: {
+                        show: false,
+                        lineStyle: {
                             color: '#1e2b43'
                         }
                     },
-        
+
                     axisTick: {
                         show: false
                     },
                     axisLine: {
-                        show:true,
+                        show: true,
                         lineStyle: {
                             color: '#115372'
                         }
                     },
-                    axisLabel:{
-                        textStyle:{
-                            color:"#419aff"
+                    axisLabel: {
+                        textStyle: {
+                            color: "#419aff"
                         },
-                        lineStyle:{
+                        lineStyle: {
                             color: '#519cff'
                         },
                         alignWithLabel: true,
-                        interval:0
+                        interval: 0
                     }
                 },
                 series: [
@@ -1432,11 +2278,11 @@ new Vue({
                             normal: {
                                 show: true,
                                 position: 'insideRight',
-                                textStyle:{
-                                    color:'#333'
+                                textStyle: {
+                                    color: '#333'
                                 }
                             }
-        
+
                         },
                         data: [
                             this.grade8CS22.A,
@@ -1456,11 +2302,11 @@ new Vue({
                         label: {
                             normal: {
                                 show: true,
-                                position: 'right',
-                                textStyle:{
-                                    color:'#00f0ff'
+                                position: 'insideRight',
+                                textStyle: {
+                                    color: '#333'
                                 }
-        
+
                             }
                         },
                         data: [
@@ -1481,14 +2327,14 @@ new Vue({
                         label: {
                             normal: {
                                 show: true,
-                                position: 'right',
-                                textStyle:{
-                                    color:'#00f0ff'
+                                position: 'insideRight',
+                                textStyle: {
+                                    color: '#333'
                                 }
-        
+
                             }
                         },
-                        data:[                   
+                        data: [
                             this.grade8CS22.C,
                             this.grade8CS21.C,
                             this.grade8CS20.C,
@@ -1506,11 +2352,11 @@ new Vue({
                         label: {
                             normal: {
                                 show: true,
-                                position: 'right',
-                                textStyle:{
-                                    color:'#00f0ff'
+                                position: 'insideRight',
+                                textStyle: {
+                                    color: '#333'
                                 }
-        
+
                             }
                         },
                         data: [
@@ -1531,11 +2377,11 @@ new Vue({
                         label: {
                             normal: {
                                 show: true,
-                                position: 'right',
-                                textStyle:{
-                                    color:'#00f0ff'
+                                position: 'insideRight',
+                                textStyle: {
+                                    color: '#333'
                                 }
-        
+
                             }
                         },
                         data: [
@@ -1552,8 +2398,631 @@ new Vue({
                 ]
             };
             juniorservice.setOption(option);
-        
-        
+
+
+        }
+    }
+})
+/* 位置九 */
+new Vue({
+    el: '#sit9',
+    data() {
+        return {
+            gradesSit9: [
+                { name: '22级思想', item: 1 },
+                { name: '22级科研竞赛', item: 2 },
+                { name: '22级文体', item: 3 },
+                { name: '22级实践', item: 4 },
+                { name: '22级学业', item: 5 },
+                { name: '21级思想', item: 6 },
+                { name: '21级科研竞赛', item: 7 },
+                { name: '21级文体', item: 8 },
+                { name: '21级实践', item: 9 },
+                { name: '21级学业', item: 10 },
+                { name: '20级思想', item: 11 },
+                { name: '20级科研竞赛', item: 12 },
+                { name: '20级文体', item: 13 },
+                { name: '20级实践', item: 14 },
+                { name: '20级学业', item: 15 },
+                { name: '19级思想', item: 16 },
+                { name: '19级科研竞赛', item: 17 },
+                { name: '19级文体', item: 18 },
+                { name: '19级实践', item: 19 },
+                { name: '19级学业', item: 20 },
+            ],
+            gradeSit9: '22级思想',
+            grade9: [
+                { name: 'xxx', score: 98 },
+                { name: 'yyy', score: 95 },
+                { name: 'ggg', score: 94 },
+                { name: 'fff', score: 93 },
+                { name: 'ddd', score: 92 },
+                { name: 'vvv', score: 88 },
+                { name: 'ccc', score: 87 },
+                { name: 'eee', score: 86 },
+                { name: 'nnn', score: 83 },
+                { name: 'hhh', score: 81 },
+                { name: 'uuu', score: 80 }
+            ],
+            grade922A: [
+                { name: 'xxx', score: 98 },
+                { name: 'yyy', score: 95 },
+                { name: 'ggg', score: 94 },
+                { name: 'fff', score: 93 },
+                { name: 'ddd', score: 92 },
+                { name: 'vvv', score: 88 },
+                { name: 'ccc', score: 87 },
+                { name: 'eee', score: 86 },
+                { name: 'nnn', score: 83 },
+                { name: 'hhh', score: 81 },
+                { name: 'uuu', score: 80 }
+            ],
+            grade922B: [
+                { name: 'xqx', score: 98 },
+                { name: 'yyq', score: 95 },
+                { name: 'qgg', score: 94 },
+                { name: 'fqf', score: 93 },
+                { name: 'ddq', score: 92 },
+                { name: 'vqv', score: 78 },
+                { name: 'qcc', score: 77 },
+                { name: 'eeq', score: 76 },
+                { name: 'nnq', score: 73 },
+                { name: 'qhh', score: 71 },
+                { name: 'uqu', score: 70 }
+            ],
+            grade922C: [
+                { name: 'xxp', score: 95 },
+                { name: 'ypy', score: 94 },
+                { name: 'pgg', score: 93 },
+                { name: 'pff', score: 92 },
+                { name: 'dpd', score: 91 },
+                { name: 'vpv', score: 88 },
+                { name: 'pcc', score: 87 },
+                { name: 'pee', score: 86 },
+                { name: 'npn', score: 73 },
+                { name: 'hph', score: 71 },
+                { name: 'upu', score: 70 }
+            ],
+            grade922D: [
+                { name: 'oxx', score: 96 },
+                { name: 'yoy', score: 91 },
+                { name: 'gog', score: 84 },
+                { name: 'fof', score: 83 },
+                { name: 'odd', score: 82 },
+                { name: 'ovv', score: 87 },
+                { name: 'coc', score: 77 },
+                { name: 'eoe', score: 76 },
+                { name: 'onn', score: 73 },
+                { name: 'hoh', score: 71 },
+                { name: 'uou', score: 70 }
+            ],
+            grade922E: [
+                { name: 'ixx', score: 98 },
+                { name: 'yiy', score: 95 },
+                { name: 'gig', score: 94 },
+                { name: 'fif', score: 93 },
+                { name: 'did', score: 92 },
+                { name: 'ivv', score: 88 },
+                { name: 'cic', score: 87 },
+                { name: 'eie', score: 86 },
+                { name: 'nin', score: 83 },
+                { name: 'ihh', score: 81 },
+                { name: 'uiu', score: 80 }
+            ],
+            grade921A: [
+                { name: 'xxx', score: 98 },
+                { name: 'yyy', score: 95 },
+                { name: 'ggg', score: 94 },
+                { name: 'fff', score: 93 },
+                { name: 'ddd', score: 92 },
+                { name: 'vvv', score: 88 },
+                { name: 'ccc', score: 87 },
+                { name: 'eee', score: 86 },
+                { name: 'nnn', score: 83 },
+                { name: 'hhh', score: 81 },
+                { name: 'uuu', score: 80 }
+            ],
+            grade921B: [
+                { name: 'xqx', score: 98 },
+                { name: 'yyq', score: 95 },
+                { name: 'qgg', score: 94 },
+                { name: 'fqf', score: 93 },
+                { name: 'ddq', score: 92 },
+                { name: 'vqv', score: 78 },
+                { name: 'qcc', score: 77 },
+                { name: 'eeq', score: 76 },
+                { name: 'nnq', score: 73 },
+                { name: 'qhh', score: 71 },
+                { name: 'uqu', score: 70 }
+            ],
+            grade921C: [
+                { name: 'xxp', score: 95 },
+                { name: 'ypy', score: 94 },
+                { name: 'pgg', score: 93 },
+                { name: 'pff', score: 92 },
+                { name: 'dpd', score: 91 },
+                { name: 'vpv', score: 88 },
+                { name: 'pcc', score: 87 },
+                { name: 'pee', score: 86 },
+                { name: 'npn', score: 73 },
+                { name: 'hph', score: 71 },
+                { name: 'upu', score: 70 }
+            ],
+            grade921D: [
+                { name: 'oxx', score: 96 },
+                { name: 'yoy', score: 91 },
+                { name: 'gog', score: 84 },
+                { name: 'fof', score: 83 },
+                { name: 'odd', score: 82 },
+                { name: 'ovv', score: 87 },
+                { name: 'coc', score: 77 },
+                { name: 'eoe', score: 76 },
+                { name: 'onn', score: 73 },
+                { name: 'hoh', score: 71 },
+                { name: 'uou', score: 70 }
+            ],
+            grade921E: [
+                { name: 'ixx', score: 98 },
+                { name: 'yiy', score: 95 },
+                { name: 'gig', score: 94 },
+                { name: 'fif', score: 93 },
+                { name: 'did', score: 92 },
+                { name: 'ivv', score: 88 },
+                { name: 'cic', score: 87 },
+                { name: 'eie', score: 86 },
+                { name: 'nin', score: 83 },
+                { name: 'ihh', score: 81 },
+                { name: 'uiu', score: 80 }
+            ],
+            grade920A: [
+                { name: 'xxx', score: 98 },
+                { name: 'yyy', score: 95 },
+                { name: 'ggg', score: 94 },
+                { name: 'fff', score: 93 },
+                { name: 'ddd', score: 92 },
+                { name: 'vvv', score: 88 },
+                { name: 'ccc', score: 87 },
+                { name: 'eee', score: 86 },
+                { name: 'nnn', score: 83 },
+                { name: 'hhh', score: 81 },
+                { name: 'uuu', score: 80 }
+            ],
+            grade920B: [
+                { name: 'xqx', score: 98 },
+                { name: 'yyq', score: 95 },
+                { name: 'qgg', score: 94 },
+                { name: 'fqf', score: 93 },
+                { name: 'ddq', score: 92 },
+                { name: 'vqv', score: 78 },
+                { name: 'qcc', score: 77 },
+                { name: 'eeq', score: 76 },
+                { name: 'nnq', score: 73 },
+                { name: 'qhh', score: 71 },
+                { name: 'uqu', score: 70 }
+            ],
+            grade920C: [
+                { name: 'xxp', score: 95 },
+                { name: 'ypy', score: 94 },
+                { name: 'pgg', score: 93 },
+                { name: 'pff', score: 92 },
+                { name: 'dpd', score: 91 },
+                { name: 'vpv', score: 88 },
+                { name: 'pcc', score: 87 },
+                { name: 'pee', score: 86 },
+                { name: 'npn', score: 73 },
+                { name: 'hph', score: 71 },
+                { name: 'upu', score: 70 }
+            ],
+            grade920D: [
+                { name: 'oxx', score: 96 },
+                { name: 'yoy', score: 91 },
+                { name: 'gog', score: 84 },
+                { name: 'fof', score: 83 },
+                { name: 'odd', score: 82 },
+                { name: 'ovv', score: 87 },
+                { name: 'coc', score: 77 },
+                { name: 'eoe', score: 76 },
+                { name: 'onn', score: 73 },
+                { name: 'hoh', score: 71 },
+                { name: 'uou', score: 70 }
+            ],
+            grade920E: [
+                { name: 'ixx', score: 98 },
+                { name: 'yiy', score: 95 },
+                { name: 'gig', score: 94 },
+                { name: 'fif', score: 93 },
+                { name: 'did', score: 92 },
+                { name: 'ivv', score: 88 },
+                { name: 'cic', score: 87 },
+                { name: 'eie', score: 86 },
+                { name: 'nin', score: 83 },
+                { name: 'ihh', score: 81 },
+                { name: 'uiu', score: 80 }
+            ],
+            grade919A: [
+                { name: 'xxx', score: 98 },
+                { name: 'yyy', score: 95 },
+                { name: 'ggg', score: 94 },
+                { name: 'fff', score: 93 },
+                { name: 'ddd', score: 92 },
+                { name: 'vvv', score: 88 },
+                { name: 'ccc', score: 87 },
+                { name: 'eee', score: 86 },
+                { name: 'nnn', score: 83 },
+                { name: 'hhh', score: 81 },
+                { name: 'uuu', score: 80 }
+            ],
+            grade919B: [
+                { name: 'xqx', score: 98 },
+                { name: 'yyq', score: 95 },
+                { name: 'qgg', score: 94 },
+                { name: 'fqf', score: 93 },
+                { name: 'ddq', score: 92 },
+                { name: 'vqv', score: 78 },
+                { name: 'qcc', score: 77 },
+                { name: 'eeq', score: 76 },
+                { name: 'nnq', score: 73 },
+                { name: 'qhh', score: 71 },
+                { name: 'uqu', score: 70 }
+            ],
+            grade919C: [
+                { name: 'xxp', score: 95 },
+                { name: 'ypy', score: 94 },
+                { name: 'pgg', score: 93 },
+                { name: 'pff', score: 92 },
+                { name: 'dpd', score: 91 },
+                { name: 'vpv', score: 88 },
+                { name: 'pcc', score: 87 },
+                { name: 'pee', score: 86 },
+                { name: 'npn', score: 73 },
+                { name: 'hph', score: 71 },
+                { name: 'upu', score: 70 }
+            ],
+            grade919D: [
+                { name: 'oxx', score: 96 },
+                { name: 'yoy', score: 91 },
+                { name: 'gog', score: 84 },
+                { name: 'fof', score: 83 },
+                { name: 'odd', score: 82 },
+                { name: 'ovv', score: 87 },
+                { name: 'coc', score: 77 },
+                { name: 'eoe', score: 76 },
+                { name: 'onn', score: 73 },
+                { name: 'hoh', score: 71 },
+                { name: 'uou', score: 70 }
+            ],
+            grade919E: [
+                { name: 'ixx', score: 98 },
+                { name: 'yiy', score: 95 },
+                { name: 'gig', score: 94 },
+                { name: 'fif', score: 93 },
+                { name: 'did', score: 92 },
+                { name: 'ivv', score: 88 },
+                { name: 'cic', score: 87 },
+                { name: 'eie', score: 86 },
+                { name: 'nin', score: 83 },
+                { name: 'ihh', score: 81 },
+                { name: 'uiu', score: 80 }
+            ],
+
+        }
+    },
+    mounted() {
+        this.drawSit9()
+        this.setTimer9()
+
+    },
+    beforeCreate() {
+        clearInterval(this.clearTimeSet9)
+    },
+    methods: {
+        setTimer9() {
+            var gradeIndex9 = 0
+            this.clearTimeSet9 = setInterval(() => {
+                gradeIndex9++;
+                gradeIndex9 %= this.gradesSit9.length
+                this.changedataA9(gradeIndex9 + 1)
+            }, 3000);
+        },
+        changedataA9(item) {
+            if (item == 1) {
+                this.grade9 = this.grade922A
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 2) {
+                this.grade9 = this.grade922B
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 3) {
+                this.grade9 = this.grade922C
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 4) {
+                this.grade9 = this.grade922D
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+
+            if (item == 5) {
+                this.grade9 = this.grade922E
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 6) {
+                this.grade9 = this.grade921A
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 7) {
+                this.grade9 = this.grade921B
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 8) {
+                this.grade9 = this.grade921C
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 9) {
+                this.grade9 = this.grade921D
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 10) {
+                this.grade9 = this.grade921E
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 11) {
+                this.grade9 = this.grade920A
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 12) {
+                this.grade9 = this.grade920B
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 13) {
+                this.grade9 = this.grade920C
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 14) {
+                this.grade9 = this.grade920D
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 15) {
+                this.grade9 = this.grade920E
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 16) {
+                this.grade9 = this.grade919A
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 17) {
+                this.grade9 = this.grade919B
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 18) {
+                this.grade9 = this.grade919C
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 19) {
+                this.grade9 = this.grade919D
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+            if (item == 20) {
+                this.grade9 = this.grade919E
+                this.gradeSit9 = this.gradesSit9[item - 1].name
+                this.drawSit9()
+            };
+        },
+        drawSit9() {
+            var changedetail = echarts.init(document.getElementById('changedetail'));
+            option = {
+                tooltip: {
+                    trigger: 'axis',
+                    formatter: '{b}</br>{a}: {c}</br>{a1}: {c1}</br>{a2}: {c2}</br>{a3}: {c3}'
+                },
+                toolbox: {
+                    show: false,
+                    feature: {
+                        dataView: { show: true, readOnly: false },
+                        magicType: { show: true, type: ['line', 'bar'] },
+                        restore: { show: true },
+                        saveAsImage: { show: true }
+                    }
+                },
+                legend: {
+                    data: ['', ''],
+                    show: false
+                },
+                grid: {
+                    top: '18%',
+                    right: '5%',
+                    bottom: '8%',
+                    left: '5%',
+                    containLabel: true
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: [
+                            this.grade9[0].name,
+                            this.grade9[1].name,
+                            this.grade9[2].name,
+                            this.grade9[3].name,
+                            this.grade9[4].name,
+                            this.grade9[5].name,
+                            this.grade9[6].name,
+                            this.grade9[7].name,
+                            this.grade9[8].name,
+                            this.grade9[9].name,
+                            this.grade9[10].name,
+                        ],
+                        splitLine: {
+                            show: false,
+                            lineStyle: {
+                                color: '#3c4452'
+                            }
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        axisLabel: {
+                            textStyle: {
+                                color: "#fff"
+                            },
+                            lineStyle: {
+                                color: '#519cff'
+                            },
+                            alignWithLabel: true,
+                            interval: 0
+                        }
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+
+                        nameTextStyle: {
+                            color: '#fff'
+                        },
+                        interval: 10,
+                        max: 100,
+                        min: 0,
+                        splitLine: {
+                            show: true,
+                            lineStyle: {
+                                color: '#23303f'
+                            }
+                        },
+                        axisLine: {
+                            show: false,
+                            lineStyle: {
+                                color: '#115372'
+                            }
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        axisLabel: {
+                            textStyle: {
+                                color: "#fff"
+                            },
+                            alignWithLabel: true,
+                            interval: 0
+
+                        }
+                    },
+                    {
+                        min: 0,
+                        max: 100,
+                        interval: 10,
+                        type: 'value',
+                        name: '',
+                        nameTextStyle: {
+                            color: '#fff'
+                        },
+                        splitLine: {
+                            show: true,
+                            lineStyle: {
+                                color: '#23303f'
+                            }
+                        },
+                        axisLine: {
+                            show: false,
+                            lineStyle: {
+                                color: '#115372'
+                            }
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        axisLabel: {
+                            textStyle: {
+                                color: "#fff"
+                            },
+                            alignWithLabel: true,
+                            interval: 0
+
+                        }
+                    }
+                ],
+                color: "yellow",
+                series: [
+                    {
+                        name: 'test1',
+                        type: 'bar',
+                        data: [
+                            this.grade9[0].score,
+                            this.grade9[1].score,
+                            this.grade9[2].score,
+                            this.grade9[3].score,
+                            this.grade9[4].score,
+                            this.grade9[5].score,
+                            this.grade9[6].score,
+                            this.grade9[7].score,
+                            this.grade9[8].score,
+                            this.grade9[9].score,
+                            this.grade9[10].score,
+                        ],
+                        boundaryGap: '45%',
+                        barWidth: '40%',
+
+                        itemStyle: {
+                            normal: {
+                                color: function (params) {
+                                    var colorList = [
+                                        '#6bc0fb', '#7fec9d', '#fedd8b', '#ffa597', '#84e4dd', '#6bc0fb', '#7fec9d', '#fedd8b', '#ffa597', '#84e4dd'
+                                    ];
+                                    return colorList[params.dataIndex]
+                                }, label: {
+                                    show: true,
+                                    position: 'top',
+                                    formatter: '{c}'
+                                }
+                            }
+                        }
+                    },
+
+                    {
+                        name: 'test2',
+                        type: 'line',
+                        yAxisIndex: 1,
+                        lineStyle: {
+                            normal: {
+                                color: '#c39705'
+                            }
+                        },
+                        data: [
+                            this.grade9[0].score,
+                            this.grade9[1].score,
+                            this.grade9[2].score,
+                            this.grade9[3].score,
+                            this.grade9[4].score,
+                            this.grade9[5].score,
+                            this.grade9[6].score,
+                            this.grade9[7].score,
+                            this.grade9[8].score,
+                            this.grade9[9].score,
+                            this.grade9[10].score,
+                        ]
+                    }
+                ]
+            };
+            changedetail.setOption(option);
+
         }
     }
 })
