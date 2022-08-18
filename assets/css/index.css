@@ -245,7 +245,7 @@ height: 200px;
 }
 
 #changedetail {
-    height: 229px;
+    height: 262px;
 }
 
 .table-kingdargen {
@@ -330,7 +330,7 @@ height: 200px;
 }
 
 #edubalance {
-    height: 203px;
+    height: 237px;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Raleway");
@@ -463,4 +463,55 @@ height: 200px;
 .button7.type7.type7:hover:before {
     width: 100%;
     height: 100%;
+}
+#sit3{
+    position: relative;
+}
+#tips{
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    width: 250px;
+    right: 100px;
+    top: 200px;
+    color: #20dbfd;;
+}
+#tip1{
+    background-color: #27c2c1;
+    width: 27px;
+    height: 14px;
+    border-radius: 2px;
+}
+#tip2{
+    background-color: #9ccb63;
+    width: 27px;
+    height: 14px;
+    border-radius: 2px;
+}
+#tip3{
+    background-color: #fcd85a;
+    width: 27px;
+    height: 14px;
+    border-radius: 2px;
+}
+#tip4{
+    background-color:  #6f80ce;
+    width: 27px;
+    height: 14px;
+    border-radius: 2px;
+}
+#tip5{
+    background-color:  #f0c1da;
+    width: 27px;
+    height: 14px;
+    border-radius: 2px;
+}
+#tips2{
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    width: 250px;
+    right: 100px;
+    bottom: 28px;
+    color: #20dbfd;;
 }

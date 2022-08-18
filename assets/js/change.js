@@ -594,7 +594,7 @@ new Vue({
                         itemStyle: {
                             normal: {
                                 label: {
-                                    show: true,
+                                    show: false,
                                     position: 'inside',
                                     formatter: '{b}'
                                 }
@@ -894,7 +894,7 @@ new Vue({
                         itemStyle: {
                             normal: {
                                 label: {
-                                    show: true,
+                                    show: false,
                                     position: 'inside',
                                     formatter: '{b}'
                                 }
