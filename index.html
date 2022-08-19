@@ -14,7 +14,7 @@
 <body>
     <!--头部-->
     <div class="header">
-        数据可视化平台
+        圣光机学院
     </div>
     <!--主体-->
     <div class="main clearfix">
@@ -165,7 +165,7 @@
             </div>
             <!--位置6 原2 各年级各专业小宇宙年变化趋势 -->
             <div class="border-container" id="sit6">
-                <div class="name-title">{{gradeSit6}}小宇宙年变化趋势及预测</div>
+                <div class="name-title">{{gradeSit6}}宇宙年变化趋势及预测</div>
                 <div id="grades6">
                     <a href="javascript:;" class="a-access" v-for="info in gradesSit6" :key="info.item"
                         @mouseenter="changeDataSit6(info.item)" @mouseleave="startAuto6()">
@@ -201,7 +201,10 @@
                         </button>
                     </a>
                 </div>
-                <table class="table table-kingdargen">
+                <table class="table table-kingdargen" 
+                @mouseenter="stopchange7()" 
+                @mouseleave="startAuto7()"
+                >
                     <thead>
                         <tr>
                             <th>序号</th>

@@ -224,6 +224,14 @@ new Vue({
                 ]
             };
             sexrate.setOption(option);
+            sexrate.off('mouseover')
+            sexrate.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet2)
+            });
+            sexrate.off('mouseout')
+            sexrate.on('mouseout',()=>{
+                this.setTimer2()
+            });
 
             var householdrate = echarts.init(document.getElementById('householdrate'));
             var total = {
@@ -316,6 +324,8 @@ new Vue({
             };
             householdrate.setOption(option);
         }
+
+
     },
 })
 /* 位置三 */
@@ -605,6 +615,15 @@ new Vue({
                 ]
             };
             courserateCS.setOption(option);
+
+            courserateCS.off('mouseover')
+            courserateCS.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet3)
+            });
+            courserateCS.off('mouseout')
+            courserateCS.on('mouseout',()=>{
+                this.setTimer3()
+            });
         },
         drawSit3CS2() {
             var courserateCS1 = echarts.init(document.getElementById('courserateCS1'));
@@ -655,6 +674,15 @@ new Vue({
                 ]
             };
             courserateCS1.setOption(option);
+
+            courserateCS1.off('mouseover')
+            courserateCS1.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet3)
+            });
+            courserateCS1.off('mouseout')
+            courserateCS1.on('mouseout',()=>{
+                this.setTimer3()
+            });
         },
         drawSit3CS3() {
             var courserateCS2 = echarts.init(document.getElementById('courserateCS2'));
@@ -705,6 +733,14 @@ new Vue({
                 ]
             };
             courserateCS2.setOption(option);
+            courserateCS2.off('mouseover')
+            courserateCS2.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet3)
+            });
+            courserateCS2.off('mouseout')
+            courserateCS2.on('mouseout',()=>{
+                this.setTimer3()
+            });
         },
         drawSit3CS4() {
             var courserateCS3 = echarts.init(document.getElementById('courserateCS3'));
@@ -755,6 +791,15 @@ new Vue({
                 ]
             };
             courserateCS3.setOption(option);
+
+            courserateCS3.off('mouseover')
+            courserateCS3.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet3)
+            });
+            courserateCS3.off('mouseout')
+            courserateCS3.on('mouseout',()=>{
+                this.setTimer3()
+            });
         },
         drawSit3CS5() {
             var courserateCS4 = echarts.init(document.getElementById('courserateCS4'));
@@ -805,6 +850,14 @@ new Vue({
                 ]
             };
             courserateCS4.setOption(option);
+            courserateCS4.off('mouseover')
+            courserateCS4.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet3)
+            });
+            courserateCS4.off('mouseout')
+            courserateCS4.on('mouseout',()=>{
+                this.setTimer3()
+            });
         },
         drawSit3CS6() {
             var courserateCS5 = echarts.init(document.getElementById('courserateCS5'));
@@ -855,6 +908,14 @@ new Vue({
                 ]
             };
             courserateCS5.setOption(option);
+            courserateCS5.off('mouseover')
+            courserateCS5.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet3)
+            });
+            courserateCS5.off('mouseout')
+            courserateCS5.on('mouseout',()=>{
+                this.setTimer3()
+            });
         },
         drawSit3Auto1() {
             var courserateAuto = echarts.init(document.getElementById('courserateAuto'));
@@ -905,6 +966,14 @@ new Vue({
                 ]
             };
             courserateAuto.setOption(option);
+            courserateAuto.off('mouseover')
+            courserateAuto.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet3)
+            });
+            courserateAuto.off('mouseout')
+            courserateAuto.on('mouseout',()=>{
+                this.setTimer3()
+            });
         },
         drawSit3Auto2() {
             var courserateAuto1 = echarts.init(document.getElementById('courserateAuto1'));
@@ -955,6 +1024,14 @@ new Vue({
                 ]
             };
             courserateAuto1.setOption(option);
+            courserateAuto1.off('mouseover')
+            courserateAuto1.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet3)
+            });
+            courserateAuto1.off('mouseout')
+            courserateAuto1.on('mouseout',()=>{
+                this.setTimer3()
+            });
         },
         drawSit3Auto3() {
             var courserateAuto2 = echarts.init(document.getElementById('courserateAuto2'));
@@ -1005,6 +1082,14 @@ new Vue({
                 ]
             };
             courserateAuto2.setOption(option);
+            courserateAuto2.off('mouseover')
+            courserateAuto2.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet3)
+            });
+            courserateAuto2.off('mouseout')
+            courserateAuto2.on('mouseout',()=>{
+                this.setTimer3()
+            });
         },
         drawSit3Auto4() {
             var courserateAuto3 = echarts.init(document.getElementById('courserateAuto3'));
@@ -1055,6 +1140,14 @@ new Vue({
                 ]
             };
             courserateAuto3.setOption(option);
+            courserateAuto3.off('mouseover')
+            courserateAuto3.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet3)
+            });
+            courserateAuto3.off('mouseout')
+            courserateAuto3.on('mouseout',()=>{
+                this.setTimer3()
+            });
         },
         drawSit3Auto5() {
             var courserateAuto4 = echarts.init(document.getElementById('courserateAuto4'));
@@ -1105,6 +1198,14 @@ new Vue({
                 ]
             };
             courserateAuto4.setOption(option);
+            courserateAuto4.off('mouseover')
+            courserateAuto4.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet3)
+            });
+            courserateAuto4.off('mouseout')
+            courserateAuto4.on('mouseout',()=>{
+                this.setTimer3()
+            });
         },
         drawSit3Auto6() {
             var courserateAuto5 = echarts.init(document.getElementById('courserateAuto5'));
@@ -1155,6 +1256,14 @@ new Vue({
                 ]
             };
             courserateAuto5.setOption(option);
+            courserateAuto5.off('mouseover')
+            courserateAuto5.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet3)
+            });
+            courserateAuto5.off('mouseout')
+            courserateAuto5.on('mouseout',()=>{
+                this.setTimer3()
+            });
         },
     }
 })
@@ -1181,10 +1290,16 @@ new Vue({
                 { A: 83, B: 89, C: 93, D: 73, F: 77 },
                 { A: 84, B: 82, C: 73, D: 75, F: 87 },
                 { A: 86, B: 84, C: 73, D: 89, F: 69 },
+                { A: 83, B: 89, C: 93, D: 73, F: 77 },
+                { A: 84, B: 82, C: 73, D: 75, F: 87 },
+                { A: 86, B: 84, C: 73, D: 89, F: 69 },
                 { A: 82, B: 81, C: 93, D: 75, F: 63 }
             ],
             grade5CS22: [
                 { A: 89, B: 84, C: 83, D: 79, F: 67 },
+                { A: 83, B: 89, C: 93, D: 73, F: 77 },
+                { A: 84, B: 82, C: 73, D: 75, F: 87 },
+                { A: 86, B: 84, C: 73, D: 89, F: 69 },
                 { A: 83, B: 89, C: 93, D: 73, F: 77 },
                 { A: 84, B: 82, C: 73, D: 75, F: 87 },
                 { A: 86, B: 84, C: 73, D: 89, F: 69 },
@@ -1195,6 +1310,9 @@ new Vue({
                 { A: 83, B: 89, C: 93, D: 73, F: 67 },
                 { A: 64, B: 62, C: 73, D: 75, F: 87 },
                 { A: 86, B: 84, C: 63, D: 89, F: 69 },
+                { A: 83, B: 89, C: 93, D: 73, F: 77 },
+                { A: 84, B: 82, C: 73, D: 75, F: 87 },
+                { A: 86, B: 84, C: 73, D: 89, F: 69 },
                 { A: 82, B: 81, C: 93, D: 65, F: 63 }
             ],
             grade5CS20: [
@@ -1202,6 +1320,9 @@ new Vue({
                 { A: 83, B: 79, C: 93, D: 73, F: 77 },
                 { A: 84, B: 82, C: 73, D: 75, F: 87 },
                 { A: 86, B: 84, C: 73, D: 89, F: 79 },
+                { A: 83, B: 89, C: 93, D: 73, F: 77 },
+                { A: 84, B: 82, C: 73, D: 75, F: 87 },
+                { A: 86, B: 84, C: 73, D: 89, F: 69 },
                 { A: 82, B: 81, C: 93, D: 75, F: 73 }
             ],
             grade5CS19: [
@@ -1209,6 +1330,9 @@ new Vue({
                 { A: 83, B: 59, C: 93, D: 73, F: 77 },
                 { A: 84, B: 52, C: 73, D: 75, F: 87 },
                 { A: 86, B: 84, C: 75, D: 59, F: 69 },
+                { A: 83, B: 89, C: 93, D: 73, F: 77 },
+                { A: 84, B: 82, C: 73, D: 75, F: 87 },
+                { A: 86, B: 84, C: 73, D: 89, F: 69 },
                 { A: 82, B: 81, C: 93, D: 75, F: 53 }
             ],
             grade5Auto22: [
@@ -1216,6 +1340,9 @@ new Vue({
                 { A: 73, B: 89, C: 73, D: 73, F: 77 },
                 { A: 87, B: 72, C: 73, D: 75, F: 87 },
                 { A: 86, B: 84, C: 73, D: 89, F: 79 },
+                { A: 83, B: 89, C: 93, D: 73, F: 77 },
+                { A: 84, B: 82, C: 73, D: 75, F: 87 },
+                { A: 86, B: 84, C: 73, D: 89, F: 69 },
                 { A: 82, B: 81, C: 93, D: 75, F: 73 }
             ],
             grade5Auto21: [
@@ -1223,6 +1350,9 @@ new Vue({
                 { A: 88, B: 89, C: 58, D: 73, F: 78 },
                 { A: 58, B: 52, C: 78, D: 75, F: 87 },
                 { A: 56, B: 88, C: 73, D: 58, F: 69 },
+                { A: 83, B: 89, C: 93, D: 73, F: 77 },
+                { A: 84, B: 82, C: 73, D: 75, F: 87 },
+                { A: 86, B: 84, C: 73, D: 89, F: 69 },
                 { A: 52, B: 81, C: 93, D: 75, F: 68 }
             ],
             grade5Auto20: [
@@ -1230,6 +1360,9 @@ new Vue({
                 { A: 63, B: 89, C: 93, D: 73, F: 66 },
                 { A: 86, B: 62, C: 66, D: 75, F: 67 },
                 { A: 86, B: 84, C: 63, D: 89, F: 66 },
+                { A: 83, B: 89, C: 93, D: 73, F: 77 },
+                { A: 84, B: 82, C: 73, D: 75, F: 87 },
+                { A: 86, B: 84, C: 73, D: 89, F: 69 },
                 { A: 86, B: 81, C: 63, D: 75, F: 63 }
             ],
             grade5Auto19: [
@@ -1237,6 +1370,9 @@ new Vue({
                 { A: 73, B: 88, C: 96, D: 76, F: 77 },
                 { A: 74, B: 88, C: 73, D: 78, F: 88 },
                 { A: 76, B: 86, C: 78, D: 89, F: 69 },
+                { A: 83, B: 89, C: 93, D: 73, F: 77 },
+                { A: 84, B: 82, C: 73, D: 75, F: 87 },
+                { A: 86, B: 84, C: 73, D: 89, F: 69 },
                 { A: 72, B: 86, C: 93, D: 78, F: 63 }
             ],
         }
@@ -1248,7 +1384,10 @@ new Vue({
                 this.grade5CSAuto[1].A,
                 this.grade5CSAuto[2].A,
                 this.grade5CSAuto[3].A,
-                this.grade5CSAuto[4].A
+                this.grade5CSAuto[4].A,
+                this.grade5CSAuto[5].A,
+                this.grade5CSAuto[6].A,
+                this.grade5CSAuto[7].A
             ]
         },
         grade5CSAutoB() {
@@ -1257,7 +1396,10 @@ new Vue({
                 this.grade5CSAuto[1].B,
                 this.grade5CSAuto[2].B,
                 this.grade5CSAuto[3].B,
-                this.grade5CSAuto[4].B
+                this.grade5CSAuto[4].B,
+                this.grade5CSAuto[5].B,
+                this.grade5CSAuto[6].B,
+                this.grade5CSAuto[7].B
             ]
         },
         grade5CSAutoC() {
@@ -1266,7 +1408,10 @@ new Vue({
                 this.grade5CSAuto[1].C,
                 this.grade5CSAuto[2].C,
                 this.grade5CSAuto[3].C,
-                this.grade5CSAuto[4].C
+                this.grade5CSAuto[4].C,
+                this.grade5CSAuto[5].C,
+                this.grade5CSAuto[6].C,
+                this.grade5CSAuto[7].C
             ]
         },
         grade5CSAutoD() {
@@ -1275,7 +1420,10 @@ new Vue({
                 this.grade5CSAuto[1].D,
                 this.grade5CSAuto[2].D,
                 this.grade5CSAuto[3].D,
-                this.grade5CSAuto[4].D
+                this.grade5CSAuto[4].D,
+                this.grade5CSAuto[5].D,
+                this.grade5CSAuto[6].D,
+                this.grade5CSAuto[7].D
             ]
         },
         grade5CSAutoE() {
@@ -1284,7 +1432,10 @@ new Vue({
                 this.grade5CSAuto[1].F,
                 this.grade5CSAuto[2].F,
                 this.grade5CSAuto[3].F,
-                this.grade5CSAuto[4].F
+                this.grade5CSAuto[4].F,
+                this.grade5CSAuto[5].F,
+                this.grade5CSAuto[6].F,
+                this.grade5CSAuto[7].F
             ]
         },
         grade5CSAutoTotal() {
@@ -1293,7 +1444,10 @@ new Vue({
             var c = this.grade5CSAuto[0].C + this.grade5CSAuto[1].C + this.grade5CSAuto[2].C + this.grade5CSAuto[3].C + this.grade5CSAuto[4].C
             var d = this.grade5CSAuto[0].D + this.grade5CSAuto[1].D + this.grade5CSAuto[2].D + this.grade5CSAuto[3].D + this.grade5CSAuto[4].D
             var e = this.grade5CSAuto[0].F + this.grade5CSAuto[1].F + this.grade5CSAuto[2].F + this.grade5CSAuto[3].F + this.grade5CSAuto[4].F
-            return [a, b, c, d, e]
+            var f = this.grade5CSAuto[0].C + this.grade5CSAuto[1].C + this.grade5CSAuto[2].C + this.grade5CSAuto[3].C + this.grade5CSAuto[4].C
+            var g = this.grade5CSAuto[0].D + this.grade5CSAuto[1].D + this.grade5CSAuto[2].D + this.grade5CSAuto[3].D + this.grade5CSAuto[4].D
+            var h = this.grade5CSAuto[0].F + this.grade5CSAuto[1].F + this.grade5CSAuto[2].F + this.grade5CSAuto[3].F + this.grade5CSAuto[4].F
+            return [a, b, c, d, e,f,g,h]
         }
     },
     mounted() {
@@ -1313,6 +1467,7 @@ new Vue({
                 gradeIndex5++;
                 gradeIndex5 %= this.grades51.length+this.grades52.length
                 this.changeDataA5(gradeIndex5 + 1)
+
             }, 3000);
         },
         clearTimer5() {
@@ -1445,7 +1600,7 @@ new Vue({
                 xAxis: [
                     {
                         type: 'category',
-                        data: ['2022年', '2023年', '2024年', '2025年', '2026年'],
+                        data:  ['大一上', '大一下', '大二上', '大二下', '大三上', '大三下', '大四上', '大四下'],
                         splitLine: {
                             show: false,
                             lineStyle: {
@@ -1626,6 +1781,15 @@ new Vue({
                 ]
             };
             edubalance.setOption(option);
+            
+            edubalance.off('mouseover')
+            edubalance.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet5)
+            });
+            edubalance.off('mouseout')
+            edubalance.on('mouseout',()=>{
+                this.setTimer5()
+            });
         }
     }
 })
@@ -1681,28 +1845,28 @@ new Vue({
                 this.gradeCS6 = this.gradeCS61
                 this.gradeAuto6 = this.gradeAuto61
                 this.gradeSit6 = this.gradesSit6[item - 1].name
-                this.drawSit6()
+                this.drawSit6(item)
                 clearInterval(this.clearTimeSet6)
             };
             if (item == 2) {
                 this.gradeCS6 = this.gradeCS62
                 this.gradeAuto6 = this.gradeAuto62
                 this.gradeSit6 = this.gradesSit6[item - 1].name
-                this.drawSit6()
+                this.drawSit6(item)
                 clearInterval(this.clearTimeSet6)
             };
             if (item == 3) {
                 this.gradeCS6 = this.gradeCS63
                 this.gradeAuto6 = this.gradeAuto63
                 this.gradeSit6 = this.gradesSit6[item - 1].name
-                this.drawSit6()
+                this.drawSit6(item)
                 clearInterval(this.clearTimeSet6)
             };
             if (item == 4) {
                 this.gradeCS6 = this.gradeCS64
                 this.gradeAuto6 = this.gradeAuto64
                 this.gradeSit6 = this.gradesSit6[item - 1].name
-                this.drawSit6()
+                this.drawSit6(item)
                 clearInterval(this.clearTimeSet6)
             };
         },
@@ -1732,7 +1896,7 @@ new Vue({
                 this.drawSit6()
             };
         },
-        drawSit6() {
+        drawSit6(item) {
             var graduateyear = echarts.init(document.getElementById('graduateyear'));
             option = {
                 title: {
@@ -1833,6 +1997,15 @@ new Vue({
                 ]
             };
             graduateyear.setOption(option);
+            graduateyear.off('mouseover')
+            graduateyear.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet6)
+            });
+            graduateyear.off('mouseout')
+            graduateyear.on('mouseout',()=>{
+                this.setTimer6()
+            });
+            
         }
     }
 })
@@ -2062,6 +2235,9 @@ new Vue({
         clearInterval(this.clearTimeSet7)
     },
     methods: {
+        stopchange7(){
+            clearInterval(this.clearTimeSet7)
+        },
         changeDataSit7(item) {
             if (item == 1) {
                 this.grade7CSAuto = this.grade7CS22
@@ -2159,12 +2335,12 @@ new Vue({
         return {
             grade8CS22: { A: 89, B: 84, C: 83, D: 79, F: 87 },
             grade8CS21: { A: 89, B: 84, C: 83, D: 79, F: 75 },
-            grade8CS20: { A: 79, B: 84, C: 83, D: 79, F: 47 },
+            grade8CS20: { A: 79, B: 84, C: 83, D: 79, F: 70 },
             grade8CS19: { A: 59, B: 84, C: 83, D: 79, F: 88 },
             grade8Auto22: { A: 79, B: 84, C: 83, D: 79, F: 67 },
             grade8Auto21: { A: 88, B: 84, C: 83, D: 79, F: 57 },
-            grade8Auto20: { A: 69, B: 84, C: 86, D: 76, F: 79 },
-            grade8Auto19: { A: 79, B: 84, C: 83, D: 79, F: 66 },
+            grade8Auto20: { A: 69, B: 84, C: 86, D: 76, F: 69 },
+            grade8Auto19: { A: 79, B: 84, C: 83, D: 79, F: 56 },
 
         }
     },
@@ -3022,6 +3198,17 @@ new Vue({
                 ]
             };
             changedetail.setOption(option);
+
+            changedetail.off('mouseover')
+            changedetail.on('mouseover',()=>{
+                clearInterval(this.clearTimeSet9)
+            });
+            changedetail.off('mouseout')
+            changedetail.on('mouseout',()=>{
+                this.setTimer9()
+            });
+
+
 
         }
     }
